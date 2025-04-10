@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import UserList from './components/UserList'
+import "./App.css";
+import UserList from "./components/userList/UserList";
+import UserDetails from "./components/userDetails/UserDetails";
+import Navbar from "./components/navbar/Navbar";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <UserList></UserList>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route path="/List" element={<UserList />} />
+        <Route path="/Details" element={<UserDetails />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

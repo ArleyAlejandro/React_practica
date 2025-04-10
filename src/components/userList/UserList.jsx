@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import styles from "./UserList.module.scss";
 
 const UserList = () => {
-  const [users, setUsers] = useState([]); // Usuarios que se muestran
-  const [allUsers, setAllUsers] = useState([]); // Todos los usuarios, sin filtrar
+  const [users, setUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]); 
   const [pendingComments, setPendingComments] = useState({});
   const [savedComments, setSavedComments] = useState({});
 
-  // Cargar usuarios y guardarlos tanto en 'users' como en 'allUsers'
   const loadUsers = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
@@ -18,7 +17,7 @@ const UserList = () => {
       })
       .then((data) => {
         setUsers(data);
-        setAllUsers(data); // Guardamos la lista completa de usuarios
+        setAllUsers(data); 
       })
       .catch((error) => {
         console.error("Request error:", error);
@@ -31,8 +30,6 @@ const UserList = () => {
       ...pendingComments,
       [id]: e.target.value,
     });
-
-    console.log(users);
   };
 
   const saveComment = (id) => {
@@ -50,11 +47,9 @@ const UserList = () => {
     console.log("comments cleaned");
   };
 
-  // Filtrar usuarios por nombre
   const filterUsers = (e) => {
     const searchText = e.target.value.toLowerCase();
     if (searchText === "") {
-      // Si el campo de búsqueda está vacío, restauramos todos los usuarios
       setUsers(allUsers);
     } else {
       const filteredUsers = allUsers.filter((user) =>
