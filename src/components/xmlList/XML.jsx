@@ -4,7 +4,7 @@ function XML() {
   const [users, setUsers] = useState([]);
 
   const loadUsersFromXML = () => {
-    fetch("users.xml") // Asegúrate de que el archivo XML esté en la carpeta `public`
+    fetch("users.xml") 
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error fetching XML");

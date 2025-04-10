@@ -1,15 +1,33 @@
+.navbar {
+  background: linear-gradient(90deg, #4a90e2, #9013fe); /* Fondo degradado */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
 .ul {
   background-color: blue;
   display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  li {
-    padding-block: 0.3rem;
-    margin-inline: 1rem;
-    a {
-        font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-  }
+li {
+  padding-block: 0.3rem;
+  margin: 0 1.5rem; /* Espaciado entre los enlaces */
+}
+
+a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s; /* Transición para efectos */
+}
+
+a:hover {
+  color: #ffdd57; /* Cambia el color al pasar el cursor */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }

@@ -12,3 +12,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Fondo claro */
+  color: #333; /* Color de texto */
+}
+
+h1, h2, h3 {
+  color: #4a90e2; /* Color principal para los encabezados */
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #9013fe; /* Cambia el color al pasar el cursor */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
